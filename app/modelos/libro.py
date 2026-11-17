@@ -41,6 +41,7 @@ class Libro(Base):
     paginas: Mapped[int | None] = mapped_column(nullable=True)
     idioma: Mapped[str] = mapped_column(String(40), nullable=False, default="Español")
     activo: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    observaciones: Mapped[str | None] = mapped_column(String(500), nullable=True)
 
     autor: Mapped[Autor] = relationship(back_populates="libros")
     ejemplares: Mapped[list[Ejemplar]] = relationship(
