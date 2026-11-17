@@ -264,5 +264,6 @@ def sesion_test(motor_test) -> Session:
         yield sesion
     finally:
         sesion.close()
-        transaccion.rollback()
+        if transaccion.is_active:
+            transaccion.rollback()
         conexion.close()
