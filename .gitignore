@@ -1,0 +1,20 @@
+# Entornos virtuales y variables de entorno
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs y sistema
+.idea/
+.vscode/
+.DS_Store
+*.swp
